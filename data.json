@@ -1,0 +1,18 @@
+{
+  "class10": {
+    "science": {
+      "chemical_reactions": [
+        {
+          "question": "What is a chemical reaction?",
+          "options": [
+            "Physical change",
+            "Formation of new substances",
+            "Change of state",
+            "None"
+          ],
+          "answer": 1
+        }
+      ]
+    }
+  }
+}

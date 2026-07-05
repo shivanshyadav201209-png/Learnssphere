@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Sphere | NCERT Q/A, Exercises and Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Learn Sphere home">
+          <img class="brand-mark" src="logo.png" alt="Learn Sphere logo" />
+          <span>Learn Sphere</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">
+          <span></span>          
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#selector">Start</a>
+          <a href="#answerArea">Q/A</a>
+          <a href="#sources">Sources</a>
+          <a class="nav-action" href="#selector">Choose Course</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">CBSE, JEE and NEET study flow</p>
+          <h1>Learn Sphere</h1>
+          <p class="hero-copy">
+            Choose your class or exam, pick a subject, select a chapter, and
+            open NCERT Q/A, NCERT exercise, intext Q/A, and extra questions.
+          </p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+  <a class="hero-button" href="#selector">Start Learning</a>
+  <a class="hero-button" href="quiz/quiz.html">Take Quiz</a>
+</div>
+        </div>
+      </section>
+
+      <section class="section" id="selector">
+        <div class="section-heading">
+          <p class="eyebrow">Step by step</p>
+          <h2>First select class or exam</h2>
+        </div>
+
+        <div class="study-app">
+          <aside class="step-panel">
+            <div class="step active" data-step="1">
+              <span>1</span>
+              <div>
+                <strong>Class or Exam</strong>
+                <p>CBSE class, JEE, or NEET</p>
+              </div>
+            </div>
+
+            <div class="step" data-step="2">
+              <span>2</span>
+              <div>
+                <strong>Subject</strong>
+                <p>Available subjects appear here</p>
+              </div>
+            </div>
+
+            <div class="step" data-step="3">
+              <span>3</span>
+              <div>
+                <strong>Chapter</strong>
+                <p>Choose a chapter or unit</p>
+              </div>
+            </div>
+
+            <div class="step" data-step="4">
+              <span>4</span>
+              <div>
+                <strong>Resources</strong>
+                <p>Open Q/A and exercises</p>
+              </div>
+            </div>
+          </aside>
+
+          <div class="choice-panel">
+            <div class="choice-block">
+              <label for="courseSelect">Class / Exam</label>
+              <select id="courseSelect">
+                <option value="">Select class or exam</option>
+              </select>
+            </div>
+
+            <div class="choice-block">
+              <label for="subjectSelect">Subject</label>
+              <select id="subjectSelect" disabled>
+                <option value="">Select subject</option>
+              </select>
+            </div>
+
+            <div class="choice-block">
+              <label for="chapterSelect">Chapter</label>
+              <select id="chapterSelect" disabled>
+                <option value="">Select chapter</option>
+              </select>
+            </div>
+
+            <div class="choice-block" id="exerciseBlock">
+              <label for="exerciseSelect">Exercise</label>
+              <select id="exerciseSelect" disabled>
+                <option value="">Select exercise</option>
+              </select>
+            </div>
+
+            <div class="selection-summary" id="selectionSummary">
+              Select a class or exam to begin.
+            </div>
+          </div>
+
+          <div id="chapterList" class="chapter-list">
+            <p class="hint">Select a subject to see chapters.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quiz-promo">
+        <div class="quiz-card">
+          <p class="eyebrow">Start quiz</p>
+          <h2>Jump into a quick practice test with one tap</h2>
+          <p>Choose your class, subject, and chapter, then launch a short quiz designed to help you review faster and study more confidently.</p>
+          <a class="hero-button quiz-button" href="quiz/quiz.html" target="_blank" rel="noopener noreferrer">Start Quiz</a>
+        </div>
+      </section>
+
+      <section class="band" id="answerArea">
+        <div class="section-heading">
+          <p class="eyebrow">Study resources</p>
+          <h2 id="resourceTitle">Your chapter resources will appear here</h2>
+        </div>
+
+        <div class="resource-tabs" role="tablist" aria-label="Resource types">
+          <button class="resource-tab" data-type="exercise">NCERT Exercise</button>
+          <button class="resource-tab" data-type="intext">Intext Q/A</button>
+          <button class="resource-tab" data-type="extra">Intext Q/A</button>
+        </div>
+
+        <section class="custom-qa-panel" id="customQaPanel">
+          <div class="section-heading">
+            <p class="eyebrow">Add questions</p>
+            <h2>Add chapter or section questions</h2>
+          </div>
+          <div class="custom-qa-form">
+            <p class="message">Use the section/topic field below to target a specific section. Then add a question and answer.</p>
+            <div class="form-field">
+              <label for="sectionInput">Section / Topic</label>
+              <input id="sectionInput" placeholder="Enter section or topic (optional)" />
+            </div>
+            <div class="form-field">
+              <label for="customQuestionInput">Question</label>
+              <textarea id="customQuestionInput" rows="3" placeholder="Enter your question"></textarea>
+            </div>
+            <div class="form-field">
+              <label for="customAnswerInput">Answer</label>
+              <textarea id="customAnswerInput" rows="4" placeholder="Enter the answer"></textarea>
+            </div>
+            <button id="addQuestionButton" class="hero-button">Add question</button>
+            <p id="addQuestionMessage" class="message" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <div class="qa-grid" id="qaGrid">
+          <article class="empty-state">
+            <h3>No chapter selected</h3>
+            <p>Complete the three choices above to load questions and answers.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="sources">
+        <div class="section-heading">
+          <p class="eyebrow">Content sources</p>
+          <h2>Use official books and trusted references</h2>
+        </div>
+
+        <div class="source-grid">
+          <article>
+            <h3>Official NCERT textbooks</h3>
+            <p>
+              Link students to official NCERT books for textbook questions,
+              chapters, and exercises.
+            </p>
+            <a href="https://ncert.nic.in/textbook.php?ln=en" target="_blank" rel="noreferrer">
+              Open NCERT Textbooks
+            </a>
+          </article>
+
+          <article>
+            <h3>ePathshala</h3>
+            <p>
+              Use ePathshala for NCERT ebooks and official learning resources.
+            </p>
+            <a href="https://epathshala.nic.in/" target="_blank" rel="noreferrer">
+              Open ePathshala
+            </a>
+          </article>
+
+            
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>Learn Sphere</strong>
+        <p>Guided NCERT and entrance exam study resources.</p>
+      </div>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn Sphere Quiz</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="quiz.css">
+<script src="quiz-data.js" defer></script>
+<script src="quiz.js" defer></script>
+</head>
+
+<body>
+
+<div class="quiz-header">
+  <h1>Learn Sphere Quiz</h1>
+  <p>Practice and test your knowledge with chapter-based questions.</p>
+</div>
+
+<div class="container">
+  <div class="card setup-card" id="setupCard">
+    <h2>Create Quiz</h2>
+
+    <label for="classSelect">Class</label>
+    <select id="classSelect"></select>
+
+    <label for="subjectSelect">Subject</label>
+    <select id="subjectSelect" disabled>
+      <option value="">Select Subject</option>
+    </select>
+
+    <label for="chapterSelect">Chapter</label>
+    <select id="chapterSelect" disabled>
+      <option value="">Select Chapter</option>
+    </select>
+
+    <label for="questionCountSelect">Questions</label>
+    <select id="questionCountSelect">
+      <option value="5">5 Questions</option>
+      <option value="10">10 Questions</option>
+      <option value="20">20 Questions</option>
+    </select>
+
+    <button id="startQuizButton" type="button">Start Quiz</button>
+  </div>
+
+  <div id="quizBox" class="card hidden">
+    <div class="timer">Time left: <span id="timer">60</span>s</div>
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="question" id="question"></div>
+    <div id="options"></div>
+    <div class="quiz-actions">
+      <button id="nextQuestionButton" type="button">Next Question</button>
+    </div>
+  </div>
+
+  <div id="resultBox" class="card hidden">
+    <h2>Quiz Completed</h2>
+    <p class="score-number" id="scoreText">0 / 0</p>
+    <div class="result-stats">
+      <div class="stat-box">
+        <strong>Correct</strong>
+        <p id="correctCount">0</p>
+      </div>
+      <div class="stat-box">
+        <strong>Total</strong>
+        <p id="totalCount">0</p>
+      </div>
+    </div>
+    <div class="quiz-actions">
+      <button id="restartQuizButton" type="button">Restart Quiz</button>
+      <a class="back-home" href="../index.html">Back to Home</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
